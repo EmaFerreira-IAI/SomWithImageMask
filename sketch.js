@@ -8,18 +8,19 @@ function preload() {
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
+
   // Criar graphics com o tamanho do canvas
   maskImage = createGraphics(windowWidth, windowHeight);
 }
 
 function draw() {
   imageMode(CORNERS);
-  background(backimg); // Fundo preto
+  background(backimg);
 
   // Desenhar na máscara - acumular os círculos
 
   // para limpar a máscara e ela não acumular ellipses
-  // maskImage.clear(); 
+  maskImage.clear();
 
   maskImage.fill(255);
   maskImage.noStroke();
